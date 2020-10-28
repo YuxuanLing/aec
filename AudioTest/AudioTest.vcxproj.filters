@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="adjustments.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="aecdelayline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="analyse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deesser.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="delayEstimation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="level.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lslimiter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lsprocess.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="noisereduction.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pp20aec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shell.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="synth.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dereverb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="echocomp_process.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lsexchndl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="micexchndl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="apa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="noisereduction_process.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="echocomp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fft.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gt384.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="keyclickremoval.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_real.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="realfft.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fftutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="adjustments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aecdelayline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aFirData48.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="analyse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="analyse_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="auddefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="audec_defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="audmediatypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="audtypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deesser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="delayEstimation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="delayEstimation_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dereverb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="echocomp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keyclickremoval.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="level_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lsexchndl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lslimiter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lslimiter_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lsprocess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lsprocess_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mathfun.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micexchndl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mm_malloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="noisereduction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="noisereduction_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pp20aec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shell_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="synth_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sFirData16.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sFirData48.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dereverb_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lsexchndl_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="micexchndl_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="apa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="echocomp_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gt_fft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fftutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="realfft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gt_fft_mem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keyclickremoval_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testdata\keyclickremovaltestdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

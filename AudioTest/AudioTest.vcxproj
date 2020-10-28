@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0AED5387-15DA-4160-83FA-D7464A0B2149}</ProjectGuid>
+    <RootNamespace>AudioTest</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 16.0</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseIntelIPP>true</UseIntelIPP>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 16.0</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseIntelIPP>true</UseIntelIPP>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 16.0</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 16.0</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <C99Support>true</C99Support>
+      <EnableExpandedLineNumberInfo>true</EnableExpandedLineNumberInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <C99Support>true</C99Support>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="adjustments.c" />
+    <ClCompile Include="aecdelayline.cpp" />
+    <ClCompile Include="analyse.c" />
+    <ClCompile Include="apa.c" />
+    <ClCompile Include="deesser.c" />
+    <ClCompile Include="delayEstimation.c" />
+    <ClCompile Include="dereverb.c" />
+    <ClCompile Include="ec.c" />
+    <ClCompile Include="echocomp.c" />
+    <ClCompile Include="echocomp_process.c" />
+    <ClCompile Include="fft.c" />
+    <ClCompile Include="fftutil.c" />
+    <ClCompile Include="gt384.c" />
+    <ClCompile Include="gt_real.c" />
+    <ClCompile Include="keyclickremoval.c" />
+    <ClCompile Include="level.c" />
+    <ClCompile Include="lsexchndl.c" />
+    <ClCompile Include="lslimiter.c" />
+    <ClCompile Include="lsprocess.c" />
+    <ClCompile Include="micexchndl.c" />
+    <ClCompile Include="noisereduction.c" />
+    <ClCompile Include="noisereduction_process.c" />
+    <ClCompile Include="pp20aec.cpp" />
+    <ClCompile Include="realfft.c" />
+    <ClCompile Include="shell.c" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="synth.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="adjustments.h" />
+    <ClInclude Include="aecdelayline.h" />
+    <ClInclude Include="aFirData48.h" />
+    <ClInclude Include="analyse.h" />
+    <ClInclude Include="analyse_priv.h" />
+    <ClInclude Include="apa.h" />
+    <ClInclude Include="auddefs.h" />
+    <ClInclude Include="audec_defs.h" />
+    <ClInclude Include="audmediatypes.h" />
+    <ClInclude Include="audtypes.h" />
+    <ClInclude Include="deesser.h" />
+    <ClInclude Include="delayEstimation.h" />
+    <ClInclude Include="delayEstimation_priv.h" />
+    <ClInclude Include="dereverb.h" />
+    <ClInclude Include="dereverb_priv.h" />
+    <ClInclude Include="ec.h" />
+    <ClInclude Include="echocomp.h" />
+    <ClInclude Include="echocomp_priv.h" />
+    <ClInclude Include="ec_priv.h" />
+    <ClInclude Include="fft.h" />
+    <ClInclude Include="fftutil.h" />
+    <ClInclude Include="gt_fft.h" />
+    <ClInclude Include="gt_fft_mem.h" />
+    <ClInclude Include="keyclickremoval.h" />
+    <ClInclude Include="keyclickremoval_priv.h" />
+    <ClInclude Include="level.h" />
+    <ClInclude Include="level_priv.h" />
+    <ClInclude Include="lsexchndl.h" />
+    <ClInclude Include="lsexchndl_priv.h" />
+    <ClInclude Include="lslimiter.h" />
+    <ClInclude Include="lslimiter_priv.h" />
+    <ClInclude Include="lsprocess.h" />
+    <ClInclude Include="lsprocess_priv.h" />
+    <ClInclude Include="mathfun.h" />
+    <ClInclude Include="micexchndl.h" />
+    <ClInclude Include="micexchndl_priv.h" />
+    <ClInclude Include="mm_malloc.h" />
+    <ClInclude Include="noisereduction.h" />
+    <ClInclude Include="noisereduction_priv.h" />
+    <ClInclude Include="pp20aec.h" />
+    <ClInclude Include="realfft.h" />
+    <ClInclude Include="sFirData16.h" />
+    <ClInclude Include="sFirData48.h" />
+    <ClInclude Include="shell.h" />
+    <ClInclude Include="shell_priv.h" />
+    <ClInclude Include="synth.h" />
+    <ClInclude Include="synth_priv.h" />
+    <ClInclude Include="testdata\keyclickremovaltestdata.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

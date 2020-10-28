@@ -1,0 +1,23 @@
+#ifndef AUDDEFS_H
+#define AUDDEFS_H
+
+#define AUD_INT_BUFSIZE_MS  10
+
+#define AUD_INT_SAMPLERATE_KHZ  48
+
+#define AUD_INT_BUFSIZE (AUD_INT_SAMPLERATE_KHZ * AUD_INT_BUFSIZE_MS)
+#define AUD_INT_BUFFERS_PER_SECOND (1000/AUD_INT_BUFSIZE_MS)
+
+#define AUD_MAXFRAMELEN     960
+
+#define TYPE_END_MARKER         0x7FFFFFFF
+
+/*
+#define MAX_DTMF_STRING_DIGITS 32
+
+#define AUD_NO_ID           0xFFFFFFFF
+#define AUD_NO_ID_SHORT     0xFFF 
+*/
+
+#endif
+
