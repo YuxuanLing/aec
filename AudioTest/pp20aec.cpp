@@ -174,10 +174,10 @@ bool PP20AEC::Process(float *inpFromNw,  //from network
 
   int frames = samples / AEC_BUFSIZE_SAMPLES;
 
-  float *curNetworkInput;
+  //float *curNetworkInput;
   float *curMicInput;
   float *curNetworkOutput;
-  float *curSpeakerOutput;
+  //float *curSpeakerOutput;
 
 #ifdef READ_NOISE_INTO_FAR_END_SIGNAL
   if (counter > 300 && counter < (300+1500))
@@ -188,32 +188,29 @@ bool PP20AEC::Process(float *inpFromNw,  //from network
   for(int k = 0; k < frames; k++)
   {
     /* advance buffer pointers one frame */
-    curNetworkInput   = inpFromNw  + (k * AEC_BUFSIZE_SAMPLES);
+    //curNetworkInput   = inpFromNw  + (k * AEC_BUFSIZE_SAMPLES);
     curMicInput       = inpFromMic + (k * AEC_BUFSIZE_SAMPLES);
     curNetworkOutput  = outToNw    + (k * AEC_BUFSIZE_SAMPLES);
-    curSpeakerOutput  = outToLs    + (k * AEC_BUFSIZE_SAMPLES);
+    //curSpeakerOutput  = outToLs    + (k * AEC_BUFSIZE_SAMPLES);
 
     /* adjust DC and measure level on signals */
     float abs_level_net;
     float abs_level_mic;
     uint32_t DcRemoveDoneNet [] = {0, 0};
     uint32_t DcRemoveDoneMic [] = {0, 0};
-    levelctrl_findLevelAndDcRemove(pData->mLevelCtrlNet, 1,
-      &abs_level_net, DcRemoveDoneNet, curNetworkInput, true, 0);
-    levelctrl_findLevelAndDcRemove(pData->mLevelCtrlMic, 1,
-      &abs_level_mic, DcRemoveDoneMic, curMicInput, true, 0);
+    //levelctrl_findLevelAndDcRemove(pData->mLevelCtrlNet, 1, &abs_level_net, DcRemoveDoneNet, curNetworkInput, true, 0);
+    levelctrl_findLevelAndDcRemove(pData->mLevelCtrlMic, 1, &abs_level_mic, DcRemoveDoneMic, curMicInput, true, 0);
 
     float mic_gain = 1.0; //FIXME ?
     float speaker_gain = 1.0; //FIXME - this should reflect the pre-adjustments done to the volume before it arrives here...
     // If we tell the PP20AEC about our leveling in GUI, it will adapt faster!
 
-    lslimiter_process(pData->mLsLimiter, &curNetworkInput, &curSpeakerOutput,
-      &pData->mLsLimiterDelayline, pData->mChannels, pData->mAerlInverse, NULL);
+    //lslimiter_process(pData->mLsLimiter, &curNetworkInput, &curSpeakerOutput, &pData->mLsLimiterDelayline, pData->mChannels, pData->mAerlInverse, NULL);
 
     lsprocess_setloudsGain(pData->mLsProcess, speaker_gain); //Set speaker gain for optimal adaptionspeed
 
     // Need a separate buffer to give to lsprocess_load
-    memcpy (pData->mLsProcessBuffer, curSpeakerOutput, AEC_BUFSIZE_SAMPLES * sizeof (float));
+    //memcpy (pData->mLsProcessBuffer, curSpeakerOutput, AEC_BUFSIZE_SAMPLES * sizeof (float));
     lsprocess_load(pData->mLsProcess, pData->mLsProcessBuffer);
 
     ec_load(pData->mEc);

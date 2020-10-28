@@ -30,6 +30,7 @@ static inline int trailing_zeros(int v)
 }
 
 #define _bit_scan_forward(x) trailing_zeros(x)
+#define _bit_scan_forward(x) __builtin_ctz(x)
 #endif
 #include "fftutil.h"
 # include <complex.h>

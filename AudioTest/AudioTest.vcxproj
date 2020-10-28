@@ -116,7 +116,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="adjustments.c" />
-    <ClCompile Include="aecdelayline.cpp" />
     <ClCompile Include="analyse.c" />
     <ClCompile Include="apa.c" />
     <ClCompile Include="deesser.c" />
@@ -183,7 +182,6 @@
     <ClInclude Include="mm_malloc.h" />
     <ClInclude Include="noisereduction.h" />
     <ClInclude Include="noisereduction_priv.h" />
-    <ClInclude Include="pp20aec.h" />
     <ClInclude Include="realfft.h" />
     <ClInclude Include="sFirData16.h" />
     <ClInclude Include="sFirData48.h" />

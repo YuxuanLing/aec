@@ -11,11 +11,11 @@ void AEC(float *playout_buffer,
 	float *aec_playout_buffer,
 	float *aec_capture_buffer,
 	int samples,
-	float delay_ms)
+	float delay_ms, PP20AEC *aec)
 {
-	PP20AEC aec = PP20AEC();
-	aec.SetDelay(delay_ms);
-	aec.Process(playout_buffer, capture_buffer, aec_playout_buffer, aec_capture_buffer, samples);
+	//PP20AEC aec = PP20AEC();
+	aec->SetDelay(delay_ms);
+	aec->Process(playout_buffer, capture_buffer, aec_playout_buffer, aec_capture_buffer, samples);
 }
 
 /*
@@ -23,10 +23,11 @@ samples: 480
 channels: 1
 meta_tag_size: 3
 */
-void AECandAGCTest(int samples = 4800, int channels = 1, int meta_tag_size = 3)
+void AECandAGCTest(int samples = 480, int channels = 1, int meta_tag_size = 3)
 {
 	float audioioDelayMs = 20.0f;
 	char ch[6] = { '0', '1', '2', '3', '4' ,'5'};
+	PP20AEC aec = PP20AEC();
 
 	for (int k = 1; k <= N; k++)
 	{
@@ -34,8 +35,8 @@ void AECandAGCTest(int samples = 4800, int channels = 1, int meta_tag_size = 3)
 		std::ifstream myInFromMic;
 		std::ofstream myOutToNetwork;
 
-		//std::string basedir = "D:/Log/audioMissOneSecond/13_10_2020_11_09_58 Call Number 1 Audio Dump/13_10_2020_11_09_58 Call Number 1 Audio Dump/13_10_2020_11_09_58";
-		std::string basedir = "E:/personal/coding/aec/13_10_2020_11_17_53 Call number 2 Audio Dump/13_10_2020_11_17_53 Call number 2 Audio Dump";
+		std::string basedir = "E:/personal/coding/aec/13_10_2020_11_09_58 Call Number 1 Audio Dump/13_10_2020_11_09_58 Call Number 1 Audio Dump/13_10_2020_11_09_58";
+		//std::string basedir = "E:/personal/coding/aec/13_10_2020_11_17_53 Call number 2 Audio Dump/13_10_2020_11_17_53 Call number 2 Audio Dump";
 		std::string my_in_from_network_name = basedir + "/mInFromNetwork.raw";
 		std::string my_in_from_mic_name = basedir + "/mInFromMic.raw";
 
@@ -82,14 +83,14 @@ void AECandAGCTest(int samples = 4800, int channels = 1, int meta_tag_size = 3)
 			// Allocate a new aec buffer that gets a mix of all the buffers, and
 			// stripped of its meta_tag header (used for 3D)
 			memset(aec_in_buffer, 0, samples_bytes);
-			memcpy(aec_in_buffer, capture_buffer_my, samples_bytes);
+			//memcpy(aec_in_buffer, capture_buffer_my, samples_bytes);
 			//{
 			//	for (int s = 0; s < samples; s++)
 			//		for (int b = 0; b < channels; b++)
 			//			aec_in_buffer[s] += in_buffer_my[(s + meta_tag_size) * channels + b];
 			//}
-
-			AEC(aec_in_buffer, capture_buffer_my, playout_buffer, out_buffer, samples, audioioDelayMs);
+			//getchar();
+			AEC(aec_in_buffer, capture_buffer_my, playout_buffer, out_buffer, samples, audioioDelayMs, &aec);
 			//we clip the samples, to make sure they are between -1 and 1
 			/* if (Clip(out_buffer, samples) > (0.9 * samples))
 			{
