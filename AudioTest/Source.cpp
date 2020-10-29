@@ -82,7 +82,7 @@ void AECandAGCTest(int samples = 480, int channels = 1, int meta_tag_size = 3)
 
 			// Allocate a new aec buffer that gets a mix of all the buffers, and
 			// stripped of its meta_tag header (used for 3D)
-			memset(aec_in_buffer, 0, samples_bytes);
+			//memset(aec_in_buffer, 0, samples_bytes);
 			//memcpy(aec_in_buffer, capture_buffer_my, samples_bytes);
 			//{
 			//	for (int s = 0; s < samples; s++)
@@ -107,6 +107,7 @@ void AECandAGCTest(int samples = 480, int channels = 1, int meta_tag_size = 3)
 			{
 				myOutToNetwork.write(reinterpret_cast<char *>(out_buffer), samples * sizeof(float));
 			}
+			printf("times %5d Finished \n",i);
 		}
 
 		_mm_free(in_buffer_my);
